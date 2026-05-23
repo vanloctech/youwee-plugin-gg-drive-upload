@@ -1,0 +1,15 @@
+{
+  "lockfileVersion": 1,
+  "configVersion": 1,
+  "workspaces": {
+    "": {
+      "name": "google-drive-upload",
+      "dependencies": {
+        "youwee-sdk": "^1.0.3",
+      },
+    },
+  },
+  "packages": {
+    "youwee-sdk": ["youwee-sdk@1.0.3", "", { "bin": { "youwee-sdk": "dist/cli.js" } }, "sha512-I77m8ZZpXwODlvgttgYPfCLrpKpGtvUA5fLlfMQpcUKjH+4dYZ9NfSD97/RJHF6QDCT3cOcy4rhOLMtoQtrJ6A=="],
+  }
+}

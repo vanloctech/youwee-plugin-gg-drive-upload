@@ -1,0 +1,68 @@
+name: Plugin Release
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Setup Deno
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: vx
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Restore signing key
+        env:
+          YOUWEE_PLUGIN_SIGNING_KEY: ${{ secrets.YOUWEE_PLUGIN_SIGNING_KEY }}
+        run: |
+          if [ -z "$YOUWEE_PLUGIN_SIGNING_KEY" ]; then
+            echo "Missing YOUWEE_PLUGIN_SIGNING_KEY secret."
+            exit 1
+          fi
+          printf '%s' "$YOUWEE_PLUGIN_SIGNING_KEY" > plugin.youwee-plugin-key.json
+
+      - name: Build plugin
+        run: bun run build
+
+      - name: Pack signed plugin
+        run: bun run pack
+
+      - name: Generate checksum
+        run: |
+          PACKAGE_FILE=$(find release -maxdepth 1 -name "*.ywp" | head -1)
+          if [ -z "$PACKAGE_FILE" ]; then
+            echo "No .ywp package found in release/."
+            exit 1
+          fi
+          sha256sum "$PACKAGE_FILE" > "$PACKAGE_FILE.sha256"
+
+      - name: Create GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: ${{ github.ref_name }}
+          tag_name: ${{ github.ref_name }}
+          draft: false
+          prerelease: false
+          generate_release_notes: true
+          files: |
+            release/*.ywp
+            release/*.sha256

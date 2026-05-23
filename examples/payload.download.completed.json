@@ -1,0 +1,21 @@
+{
+  "jobId": "sample-job",
+  "source": "youtube",
+  "trigger": "download.completed",
+  "filepath": "/tmp/sample.mp4",
+  "filename": "sample.mp4",
+  "directory": "/tmp",
+  "filesize": 12345678,
+  "format": "mp4",
+  "quality": "1080p",
+  "url": "https://example.com/video",
+  "title": "Sample video",
+  "thumbnail": "https://example.com/thumb.jpg",
+  "historyId": "sample-history-id",
+  "timeRange": null,
+  "downloadKind": "download",
+  "workflowRunId": null,
+  "workflowStepIndex": null,
+  "workflowStepPluginId": null,
+  "chainState": null
+}

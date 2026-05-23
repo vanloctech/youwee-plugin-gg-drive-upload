@@ -1,0 +1,16 @@
+{
+  "success": true,
+  "message": "Uploaded sample.mp4 to Google Drive.",
+  "artifacts": null,
+  "metadata": {
+    "driveFileId": "1abcDEFghiJKL",
+    "driveFilename": "sample.mp4",
+    "driveFolderId": "1AbCdEfGhIjKlMnOpQrStUvWxYz",
+    "driveWebViewLink": "https://drive.google.com/file/d/1abcDEFghiJKL/view",
+    "driveWebContentLink": "https://drive.google.com/uc?id=1abcDEFghiJKL&export=download",
+    "uploadedMimeType": "video/mp4",
+    "uploadedSize": "12345678",
+    "sourceFilepath": "/tmp/sample.mp4",
+    "sourceFilename": "sample.mp4"
+  }
+}

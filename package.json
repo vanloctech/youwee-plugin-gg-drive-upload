@@ -1,0 +1,17 @@
+{
+  "name": "google-drive-upload",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Upload completed downloads to Google Drive.",
+  "type": "commonjs",
+  "main": "src/plugin.js",
+  "scripts": {
+    "build": "bunx youwee-sdk build",
+    "pack": "bunx youwee-sdk pack --private-key ./plugin.youwee-plugin-key.json",
+    "keygen": "bunx youwee-sdk keygen ./plugin.youwee-plugin-key.json",
+    "test:deno": "YOUWEE_PLUGIN_MAIN=$PWD/src/plugin.js deno run --quiet --unstable-detect-cjs --allow-env --allow-read=. --allow-write=. node_modules/youwee-sdk/dist/runtime-cli.js"
+  },
+  "dependencies": {
+    "youwee-sdk": "^1.0.3"
+  }
+}

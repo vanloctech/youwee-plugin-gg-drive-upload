@@ -1,0 +1,9 @@
+{
+  "log.uploadStarted": "Starting Google Drive upload",
+  "log.uploadSucceeded": "Google Drive upload completed",
+  "log.uploadFailed": "Google Drive upload failed",
+  "result.success": "Uploaded {{filename}} to Google Drive.",
+  "result.failure": "Google Drive upload failed: {{error}}",
+  "error.missingFilepath": "The completed download payload does not include a file path.",
+  "error.tokenExchangeFailed": "Failed to exchange refresh token: {{details}}"
+}

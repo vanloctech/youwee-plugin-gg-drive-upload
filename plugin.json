@@ -1,0 +1,89 @@
+{
+  "id": "com.vanloctech.gg-drive-upload",
+  "slug": "google-drive-upload",
+  "name": "Google Drive Upload",
+  "version": "0.1.0",
+  "description": "Upload completed downloads to Google Drive.",
+  "author": "Loc Nguyen",
+  "homepage": "https://github.com/vanloctech/youwee-plugin-gg-drive-upload",
+  "repository": "https://github.com/vanloctech/youwee-plugin-gg-drive-upload",
+  "license": "MIT",
+  "runtime": {
+    "language": "javascript",
+    "supportedProviders": [
+      "deno"
+    ],
+    "preferredProvider": "deno",
+    "entrypoint": "src/plugin.js"
+  },
+  "compatibility": {
+    "appVersion": ">=0.13.3 <0.14.0",
+    "sdkVersion": ">=1.0.1 <1.1.0"
+  },
+  "triggers": [
+    "download.completed"
+  ],
+  "permissions": {
+    "network": true,
+    "fs": [
+      "fs.payload-file.read"
+    ]
+  },
+  "configFields": [
+    {
+      "key": "client_id",
+      "inputType": "text",
+      "label": "Google Drive Client ID",
+      "description": "OAuth 2.0 client ID from Google Cloud Console.",
+      "placeholder": "1234567890-abc123.apps.googleusercontent.com",
+      "required": true,
+      "sensitive": false
+    },
+    {
+      "key": "client_secret",
+      "inputType": "password",
+      "label": "Google Drive Client Secret",
+      "description": "OAuth 2.0 client secret paired with the client ID.",
+      "placeholder": "GOCSPX-...",
+      "required": true,
+      "sensitive": true
+    },
+    {
+      "key": "refresh_token",
+      "inputType": "password",
+      "label": "Google Refresh Token",
+      "description": "Offline refresh token with drive.file or drive scope.",
+      "placeholder": "1//0gabc123...",
+      "required": true,
+      "sensitive": true
+    },
+    {
+      "key": "folder_id",
+      "inputType": "text",
+      "label": "Google Drive Folder ID",
+      "description": "Destination folder ID in Google Drive.",
+      "placeholder": "1AbCdEfGhIjKlMnOpQrStUvWxYz",
+      "required": true
+    },
+    {
+      "key": "filename_format",
+      "inputType": "text",
+      "label": "Filename Format",
+      "description": "Optional template. Supported placeholders: {filename}, {basename}, {ext}, {title}, {source}, {quality}, {format}, {date}, {timestamp}.",
+      "placeholder": "{title} [{quality}]",
+      "defaultValue": "{filename}"
+    }
+  ],
+  "timeoutSec": 300,
+  "readme": "README.md",
+  "checksum": null,
+  "publishedAt": null,
+  "i18n": {
+    "defaultLocale": "en",
+    "supportedLocales": [
+      "en",
+      "vi"
+    ],
+    "directory": "locales"
+  }
+}

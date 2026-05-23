@@ -1,0 +1,9 @@
+{
+  "log.uploadStarted": "Bat dau tai len Google Drive",
+  "log.uploadSucceeded": "Tai len Google Drive thanh cong",
+  "log.uploadFailed": "Tai len Google Drive that bai",
+  "result.success": "Da tai {{filename}} len Google Drive.",
+  "result.failure": "Tai len Google Drive that bai: {{error}}",
+  "error.missingFilepath": "Payload download hoan tat khong co duong dan tep.",
+  "error.tokenExchangeFailed": "Khong doi duoc refresh token: {{details}}"
+}

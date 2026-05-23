@@ -1,0 +1,11 @@
+{
+  "success": false,
+  "message": "Google Drive upload failed: Failed to exchange refresh token: invalid_grant",
+  "artifacts": null,
+  "metadata": {
+    "error": "Failed to exchange refresh token: invalid_grant",
+    "sourceFilepath": "/tmp/sample.mp4",
+    "sourceFilename": "sample.mp4",
+    "folderId": "1AbCdEfGhIjKlMnOpQrStUvWxYz"
+  }
+}
