@@ -4,6 +4,7 @@
   "name": "Google Drive Upload",
   "version": "0.1.0",
   "description": "Upload completed downloads to Google Drive.",
+  "icon": "hard-drive-upload",
   "author": "Loc Nguyen",
   "homepage": "https://github.com/vanloctech/youwee-plugin-gg-drive-upload",
   "repository": "https://github.com/vanloctech/youwee-plugin-gg-drive-upload",
