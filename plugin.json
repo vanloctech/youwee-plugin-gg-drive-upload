@@ -17,8 +17,8 @@
     "entrypoint": "src/plugin.js"
   },
   "compatibility": {
-    "appVersion": ">=0.13.3 <0.14.0",
-    "sdkVersion": ">=1.0.1 <1.1.0"
+    "appVersion": ">=0.14.0 <1.0.0",
+    "sdkVersion": ">=1.0.3 <1.1.0"
   },
   "triggers": [
     "download.completed"
