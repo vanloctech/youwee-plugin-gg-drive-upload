@@ -15,11 +15,11 @@
       "deno"
     ],
     "preferredProvider": "deno",
-    "entrypoint": "src/plugin.js"
+    "entrypoint": "src/plugin.ts"
   },
   "compatibility": {
-    "appVersion": ">=0.14.0 <1.0.0",
-    "sdkVersion": ">=1.0.3 <1.1.0"
+    "appVersion": ">=0.15.0 <1.0.0",
+    "sdkVersion": ">=2.1.0 <3.0.0"
   },
   "triggers": [
     "download.completed"

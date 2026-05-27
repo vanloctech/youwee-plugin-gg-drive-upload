@@ -4,14 +4,18 @@
   "private": true,
   "description": "Upload completed downloads to Google Drive.",
   "type": "commonjs",
-  "main": "src/plugin.js",
+  "main": "src/plugin.ts",
   "scripts": {
     "build": "bunx youwee-sdk build",
     "pack": "bunx youwee-sdk pack --private-key ./plugin.youwee-plugin-key.json",
     "keygen": "bunx youwee-sdk keygen ./plugin.youwee-plugin-key.json",
-    "test:deno": "YOUWEE_PLUGIN_MAIN=$PWD/src/plugin.js deno run --quiet --unstable-detect-cjs --allow-env --allow-read=. --allow-write=. node_modules/youwee-sdk/dist/runtime-cli.js"
+    "typecheck": "tsc -p ./tsconfig.json --noEmit",
+    "test:deno": "YOUWEE_PLUGIN_MAIN=$PWD/src/plugin.ts deno run --quiet --unstable-detect-cjs --allow-env --allow-read=. node_modules/youwee-sdk/dist/runtime-cli.js"
   },
   "dependencies": {
-    "youwee-sdk": "^1.0.3"
+    "youwee-sdk": "^2.1.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
   }
 }

@@ -5,11 +5,16 @@
     "": {
       "name": "google-drive-upload",
       "dependencies": {
-        "youwee-sdk": "^1.0.3",
+        "youwee-sdk": "^2.1.1",
+      },
+      "devDependencies": {
+        "typescript": "^5.9.3",
       },
     },
   },
   "packages": {
-    "youwee-sdk": ["youwee-sdk@1.0.3", "", { "bin": { "youwee-sdk": "dist/cli.js" } }, "sha512-I77m8ZZpXwODlvgttgYPfCLrpKpGtvUA5fLlfMQpcUKjH+4dYZ9NfSD97/RJHF6QDCT3cOcy4rhOLMtoQtrJ6A=="],
+    "typescript": ["typescript@5.9.3", "", { "bin": { "tsc": "bin/tsc", "tsserver": "bin/tsserver" } }, "sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw=="],
+
+    "youwee-sdk": ["youwee-sdk@2.1.1", "", { "bin": { "youwee-sdk": "dist/cli.js" } }, "sha512-0r0EGlRFYZGEFBGcifvTue2OCWmasx88Fc+8331uYfmPyBSUDxoC8mMfbrl0WI5f1OI4T+Lv2WTnzocK/IY4+A=="],
   }
 }
