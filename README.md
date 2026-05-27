@@ -1,3 +1,9 @@
+## Downloads
+| Type | Download |
+| --- | --- |
+| Plugin file | [Download](https://github.com/vanloctech/youwee-plugin-gg-drive-upload/releases/latest/download/notification-webhooks.ywp) |
+| Checksum | [SHA256](https://github.com/vanloctech/youwee-plugin-gg-drive-upload/releases/latest/download/notification-webhooks.ywp.sha256) |
+
 # Google Drive Upload
 
 This plugin automatically uploads a completed download file to a configured Google Drive folder.
