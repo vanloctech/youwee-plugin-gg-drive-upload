@@ -15,7 +15,7 @@ import { inferMimeType } from "./mime.ts";
 const plugin = definePlugin({
   meta: {
     name: "Google Drive Upload",
-    version: "0.1.0",
+    version: "1.0.0",
     description: "Upload completed downloads to Google Drive.",
   },
 

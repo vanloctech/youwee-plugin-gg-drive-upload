@@ -1,6 +1,6 @@
 {
   "name": "google-drive-upload",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "description": "Upload completed downloads to Google Drive.",
   "type": "commonjs",
